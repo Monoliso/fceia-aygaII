@@ -7,8 +7,10 @@ int main() {
     Cuerpo reales = {reales_comparar, reales_suma, reales_producto, reales_io};
     Matriz m1 = matriz_crear(reales, 2, 3);
 
-    float f1[] = {1, 2, 0};
+    float f1[] = {1, 2};
     float f2[] = {-3, 1, 4};
+    // float *m1[] = {f1, f2};
+
 
     matriz_cambiar_fila(m1, 0, (void* []){f1+0, f1+1, f1+2});
     matriz_cambiar_fila(m1, 1, (void* []){f2, f2+1, f2+2});

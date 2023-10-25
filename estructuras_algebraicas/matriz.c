@@ -6,7 +6,7 @@
 // Genera una matriz nula con las dimensiones dadas. Debería estar restringido
 // para los enteros en adelante, pero comprobar si es cuerpo válido es muy
 // complicado.
-Matriz matriz_crear(Cuerpo cuerpo, int nro_filas, int nro_columnas) {
+Matriz matriz_crear(Cuerpo cuerpo, unsigned nro_filas, unsigned nro_columnas) {
 
     Matriz resultado = malloc(sizeof(struct __matriz__));
 
@@ -23,10 +23,8 @@ Matriz matriz_crear(Cuerpo cuerpo, int nro_filas, int nro_columnas) {
 
 void matriz_imprimir(Matriz matriz) {
     for(int i = 0; i < matriz->nro_filas; i++) {
-        printf("%d | ", i);
         for(int x = 0; x < matriz->nro_columnas; x++) {
             matriz->universo.mundo_real.imprimir(matriz->contenido[i][x]);
-            printf("| ");
         }
         puts("");
     }

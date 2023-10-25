@@ -14,7 +14,7 @@ void *reales_crear(int cantidad, ...) {
 }
 
 void reales_imprimir(void* real) {
-    printf("%-10.3f", *((float*) real));
+    printf("%-8.2f", *((float*) real));
 }
 
 void* reales_copiar(void* real) {

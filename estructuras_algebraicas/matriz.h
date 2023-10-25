@@ -13,7 +13,7 @@ typedef struct __matriz__{
 // La idea es que matriz sea una instancia (que en teoría podría ser un alias) de un cuerpo.
 // Así, dependiendo del tipo de matriz se puede garantizar las operaciones básicas.
 
-Matriz matriz_crear(Cuerpo, int, int);
+Matriz matriz_crear(Cuerpo, unsigned, unsigned);
 
 void* matriz_copiar(Matriz);
 
