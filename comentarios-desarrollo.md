@@ -17,7 +17,7 @@ matriz_cambiar_fila(matriz, 2, Pila x);
 ```
 
 ## Generación de instancia con los argumentos establecidos
-Otro acercamiento es instanciar con los elementos. De vuelta, tiene que ser un arreglo. El tema es determinar la cantidad de elementos.
+Otro acercamiento es instanciar con los elementos. De vuelta, tiene que ser un arreglo.
 
 ```C
 matriz_crear(cuerpo, "n1 n2 n3; ...");
