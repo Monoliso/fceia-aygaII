@@ -10,6 +10,7 @@ int main() {
     float f1[] = {1, 2};
     float f2[] = {-3, 1, 4};
     // float *m1[] = {f1, f2};
+    
 
 
     matriz_cambiar_fila(m1, 0, (void* []){f1+0, f1+1, f1+2});
