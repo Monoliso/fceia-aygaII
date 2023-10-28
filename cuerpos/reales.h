@@ -1,18 +1,22 @@
 #ifndef REALES
 #define REALES
 
-void *reales_crear(int cantidad, ...);
+float *reales_crear(char *matriz);
 
-void reales_imprimir(void* real);
+void reales_imprimir(float *real);
 
-void* reales_copiar(void* real);
+float *reales_copiar(float *real);
 
-void reales_eliminar(void *real);
+void reales_eliminar(float *real);
 
-int reales_comparar(void *real1, void* real2);
+int reales_comparar(float *real1, float *real2);
 
-void * reales_suma(void *real1, void* real2);
+float *reales_suma(float *real1, float *real2);
 
-void* reales_producto(void *real1, void*real2);
+float *reales_producto(float *real1, float *real2);
+
+float *reales_resta(float *real1, float *real2);
+
+float *reales_division(float *real1, float *real2);
 
 #endif

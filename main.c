@@ -1,11 +1,13 @@
 #include "cuerpos/reales.h"
-#include "estructuras_algebraicas/matriz.h"
+#include "espacios-vectoriales/matriz.h"
 
 int main() {
 
-    IO reales_io = {reales_crear, reales_imprimir, reales_copiar, reales_eliminar};
-    Cuerpo reales = {reales_comparar, reales_suma, reales_producto, reales_io};
-    Matriz m1 = matriz_crear(reales, 2, 3);
+    IO reales_io = {(fn_cons)reales_crear, (fn_imp)reales_imprimir, (fn_dup)reales_copiar, (fn_dest)reales_eliminar};
+    Cuerpo reales = {(fn_comp)reales_comparar, (fn_sum)reales_suma, (fn_dif)reales_resta, 
+        (fn_prod)reales_producto, (fn_div)reales_division, reales_io};
+    
+    Matriz m1 = matriz_crear(reales, "x");
 
     float f1[] = {1, 2};
     float f2[] = {-3, 1, 4};
@@ -22,6 +24,6 @@ int main() {
     // Cuerpo* reales = cuerpo_construir(reales_comparar, reales_suma, reales_producto, io_reales);
     // reales.realidad.eliminar(i);
 
-    matriz_eliminar(m1);
+    // matriz_eliminar(m1);
     return 0;
 }
