@@ -26,7 +26,7 @@ typedef struct io {
 } IO;
 
 typedef struct {
-    fn_comp comparar;
+    fn_comp comparacion;
     fn_sum suma;
     fn_dif resta;
     fn_prod producto;
