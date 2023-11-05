@@ -4,8 +4,8 @@
     manual.
 */
 
-#ifndef UNIVERSOS_ESTATICO
-#define UNIVERSOS_ESTATICO
+#ifndef CUERPO
+#define CUERPO
 
 typedef void *(* fn_cons) (char *input);
 typedef void *(* fn_imp) (void *input);
@@ -25,13 +25,15 @@ typedef struct io {
     fn_dest destruir;
 } IO;
 
-typedef struct {
+typedef struct __cuerpo__ {
     fn_comp comparacion;
     fn_sum suma;
     fn_dif resta;
     fn_prod producto;
     fn_div division;
     IO mundo_real;
-} Cuerpo;
+} *Cuerpo;
+
+Cuerpo obtener_cuerpo();
 
 #endif

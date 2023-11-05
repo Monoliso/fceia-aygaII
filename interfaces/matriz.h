@@ -1,10 +1,10 @@
 #include <stdlib.h>
-#include "../cuerpos/universos.h"
+#include "cuerpos.h"
 
 #ifndef MATRIZ
 #define MATRIZ
 
-typedef struct __matriz__{
+typedef struct __matriz__ {
     Cuerpo universo;
     int nro_filas, nro_columnas;
     void ***contenido;
