@@ -1,11 +1,13 @@
-#include "matriz.h"
 #include <stdio.h>
+#include "../interfaces/matriz.h"
 
 // ---------------- Manejo de memoria ----------------
 
 // Genera una matriz nula con las dimensiones dadas. Debería estar restringido
 // para los enteros en adelante, pero comprobar si es cuerpo válido es muy
 // complicado.
+
+
 Matriz matriz_crear(Cuerpo cuerpo, char *matriz) {
 
     Matriz resultado = malloc(sizeof(struct __matriz__));

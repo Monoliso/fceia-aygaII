@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "cuerpos.h"
+#include "cuerpo.h"
 
 #ifndef MATRIZ
 #define MATRIZ

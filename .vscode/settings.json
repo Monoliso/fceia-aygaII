@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "matriz.h": "c",
-        "reales.h": "c"
+        "reales.h": "c",
+        "stdbool.h": "c"
     }
 }
