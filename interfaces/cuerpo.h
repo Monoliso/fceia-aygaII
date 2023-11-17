@@ -8,8 +8,7 @@
 #ifndef CUERPO_H
 #define CUERPO_H
 
-typedef void* (* fn_cons) (char *input);
-// typedef bool  (* fn_trad) (char *input); // Revisar
+typedef void* (* fn_cons) (char **input);
 typedef void (* fn_imp) (void *input);
 typedef void* (* fn_dup) (void *input);
 typedef void  (* fn_dest) (void *input);

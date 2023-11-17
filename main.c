@@ -1,24 +1,35 @@
 #include "interfaces/cuerpo.h"
 #include "interfaces/matriz.h"
+#include <stdio.h>
 
-int main() {
+typedef enum {
+    ESCALON = 'E',
+    SUMA = '+',
+    RESTA = '-'
+} Operaciones;
+
+int main(int argc, char *argv[]) {
     
-    // Matriz m1 = matriz_crear(obtener_cuerpo(), "x");
-    
-    // float f1[] = {1, 2};
-    // float f2[] = {-3, 1, 4};
+    Matriz m1 = NULL;
+    Matriz m2 = NULL;
 
-    // float *m1[] = {f1, f2};
-    
-    // matriz_cambiar_fila(m1, 0, (void* []){f1+0, f1+1, f1+2});
-    // matriz_cambiar_fila(m1, 1, (void* []){f2, f2+1, f2+2});
+    if (argc < 3) {
+        fprintf(stderr, "La cantidad de argumentos es insuficiente.\n");
+        exit(1);
+    }
 
-    // matriz_imprimir(m1);
+    switch(argv[0][0]) {
+        case ESCALON:
+            m1 = matriz_crear(obtener_cuerpo(), argv[1]);
+            if (m1) {matriz_imprimir(m1); break;}
+            else exit(1);
+        default: {
+            fprintf(stderr, "La operación no se puede realizar\n");
+            exit(1);
+        }
+    }
 
-    // IO *io_reales = io_construir(reales_crear, reales_imprimir, reales_copiar, reales_eliminar);
-    // Cuerpo* reales = cuerpo_construir(reales_comparar, reales_suma, reales_producto, io_reales);
-    // reales.realidad.eliminar(i);
-
-    // matriz_eliminar(m1);
+    if (m1) matriz_eliminar(m1);
+    if (m2) matriz_eliminar(m2);
     return 0;
 }
